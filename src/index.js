@@ -29,7 +29,7 @@ function createFloatingDiv() {
   // div의 위치와 애니메이션 시간을 랜덤하게 설정
   const randomLeft = Math.random() * (viewportWidth - 50); // 50px는 div의 너비
   const randomBottom = 0; // 하단에서 시작
-  const randomDuration = Math.random() * 5 + 2; // 2초에서 7초 사이의 랜덤 시간
+  const randomDuration = Math.random() * 3 + 1; // 1초에서 5초 사이의 랜덤 시간
 
   // div에 랜덤 위치와 애니메이션 시간 설정
   div.style.left = `${randomLeft}px`;
@@ -53,7 +53,7 @@ function createFloatingDiv() {
 }
 
 function endGame() {
-  // 모든 floatingDiv 요소를 제거
+  // 게임이 끝난 즉시 풍선 제거
   const allDivs = document.querySelectorAll('.floatingDiv');
   allDivs.forEach(div => div.remove());
 
